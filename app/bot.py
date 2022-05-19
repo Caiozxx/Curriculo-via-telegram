@@ -35,4 +35,4 @@ class TelegramBot:
         request.get(link_envio)
 
 bot = TelegramBot()
-bot.iniciar()
+bot.Iniciar()
