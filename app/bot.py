@@ -10,8 +10,8 @@ class TelegramBot:
     def Iniciar(self):
         update_id = None
         while True:
-            upgrade = self.obter_mensagens(update_id)
-            mensagens = upgrade ['result']
+            atualizacao = self.obter_mensagens(update_id)
+            mensagens = atualizacao ['result']
             if mensagens:
                 for mensagem in mensagens:
                     update_id = mensagem['update_id']
