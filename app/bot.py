@@ -11,7 +11,7 @@ class TelegramBot:
         update_id = None
         while True:
             upgrade = self.obter_mensagens(update_id)
-            mensagens = update ['result']
+            mensagens = upgrade ['result']
             if mensagens:
                 for mensagem in mensagens:
                     update_id = mensagem['update_id']
@@ -32,7 +32,7 @@ class TelegramBot:
     def responder(self,resposta,chat_id):
         #enviar
         link_envio = f'{self.url_base}sendMessage?chat_id={chat_id}&text={resposta}'
-        request.get(link_envio)
+        requests.get(link_envio)
 
 bot = TelegramBot()
 bot.Iniciar()
