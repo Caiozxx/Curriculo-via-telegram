@@ -31,7 +31,7 @@ class TelegramBot:
     #responder
     def responder(self,resposta,chat_id):
         #enviar
-        link_envio = f'{self.url_base}sendMessage?chat_id{chat_id}&text={resposta}'
+        link_envio = f'{self.url_base}sendMessage?chat_id={chat_id}&text={resposta}'
         request.get(link_envio)
 
 bot = TelegramBot()
